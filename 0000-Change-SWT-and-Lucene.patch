@@ -1,0 +1,34 @@
+--- rt-11.0.3+1/build.gradle
++++ rt-11.0.3+1-patched/build.gradle
+@@ -2477,7 +2477,7 @@
+     commonModuleSetup(project, [ 'base', 'graphics' ])
+ 
+     dependencies {
+-        compile name: SWT_FILE_NAME
++        compile group: "org.eclipse.swt", name: "swt", version: "3.108.0"
+     }
+ 
+     classes {
+@@ -4582,16 +4582,16 @@
+     // Download the Lucene libraries needed for the Ensemble8 app
+     getConfigurations().create("lucene");
+     dependencies {
+-        lucene group: "org.apache.lucene", name: "lucene-core", version: "7.1.0"
+-        lucene group: "org.apache.lucene", name: "lucene-grouping", version: "7.1.0"
+-        lucene group: "org.apache.lucene", name: "lucene-queryparser", version: "7.1.0"
++        lucene group: "org.apache.lucene", name: "lucene-core", version: "7.7.0"
++        lucene group: "org.apache.lucene", name: "lucene-grouping", version: "7.7.0"
++        lucene group: "org.apache.lucene", name: "lucene-queryparser", version: "7.7.0"
+     }
+ 
+     // Copy Lucene libraries into the Ensemble8/lib directory
+     File ensembleLibDir = rootProject.file("apps/samples/Ensemble8/lib");
+-    def libNames = [ "lucene-core-7.1.0.jar",
+-                     "lucene-grouping-7.1.0.jar",
+-                     "lucene-queryparser-7.1.0.jar" ]
++    def libNames = [ "lucene-core-7.7.0.jar",
++                     "lucene-grouping-7.7.0.jar",
++                     "lucene-queryparser-7.7.0.jar" ]
+ 
+ 
+     task getLucene(type: Copy) {
