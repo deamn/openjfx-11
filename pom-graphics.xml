@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<name>javafx.graphics</name>
+	<packaging>pom</packaging>
+	<artifactId>javafx.graphics</artifactId>
+	<parent>
+		<groupId>org.openjfx</groupId>
+		<artifactId>javafx</artifactId>
+		<relativePath>../pom.xml</relativePath>
+		<version>11.0.2</version>
+	</parent>
+	<modules>
+		<module>mvn-antlr</module>
+		<module>mvn-graphics</module>
+		<module>mvn-decora</module>
+	</modules>
+	<build>
+		
+	</build>
+
+	<dependencyManagement>
+		<dependencies>
+			
+		</dependencies>
+	</dependencyManagement>
+
+</project>
