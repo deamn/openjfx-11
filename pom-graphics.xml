@@ -14,9 +14,19 @@
 		<module>mvn-antlr</module>
 		<module>mvn-graphics</module>
 		<module>mvn-decora</module>
+		<module>mvn-prism</module>
+		<module>mvn-fulljava</module>
 	</modules>
 	<build>
-		
+		<plugins>
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.1.2</version>
+				<configuration>
+					<finalName>javafx.graphics</finalName>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 
 	<dependencyManagement>

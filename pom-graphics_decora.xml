@@ -55,14 +55,14 @@
 				<directory>../src/main/jsl-decora</directory>
 				<excludes>
 					<exclude>**/*.java</exclude>
-					<exclude>**/*.rc</exclude>
+					<exclude>**/*.jsl</exclude>
 				</excludes>
 			</resource>
 		</resources>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.0</version>
+				<version>3.8.1</version>
 				<configuration>
 					<release>11</release>
 					<compilerArgs>
