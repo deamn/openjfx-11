@@ -1,8 +1,8 @@
 <project name="VersionInfo" default="replaceVersionInfo" basedir=".">
   <!-- set global properties for this build -->
-  <property file="/home/deamicisn/developpement/git/openjfx-11/rt-11.0.3+1-orig/build.properties"/>
+  <property file="build.properties"/>
   
-  <property name="file.versioninfo"	value="/home/deamicisn/developpement/git/openjfx-11/rt-11.0.3+1-orig/modules/javafx.base/src/main/version-info/VersionInfo.java"/>
+  <property name="file.versioninfo"	value="modules/javafx.base/src/main/version-info/VersionInfo.java"/>
   
   <target name="replaceVersionInfo" depends="replaceReleaseVersion">
 	  <echo message="RELEASE_SUFFIX="/>

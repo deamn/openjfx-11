@@ -12,6 +12,12 @@
 	<modules>
 		<module>modules/javafx.base</module>
 		<module>modules/javafx.graphics</module>
+		<module>modules/javafx.media</module>
+		<module>modules/javafx.controls</module>
+		<module>modules/javafx.swt</module>
+		<module>modules/javafx.web</module>
+		<module>modules/javafx.fxml</module>
+		<module>modules/javafx.swing</module>
 	</modules>
 	<build>
 		

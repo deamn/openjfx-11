@@ -11,7 +11,7 @@ URL:            http://openjdk.java.net/projects/openjfx/
 
 Source0:        hg.openjdk.java.net/openjfx/11/rt/archive/rt-11.0.3+1.tar.bz2
 
-Patch0:         0000-Change-SWT-and-Lucene.patch
+#Patch0:         0000-Change-SWT-and-Lucene.patch
 #Patch0:         0000-Fix-wait-call-in-PosixPlatform.patch
 #Patch1:         0001-Change-SWT-and-Lucene.patch
 #Patch2:         0002-Allow-build-to-work-on-newer-gradles.patch
@@ -25,21 +25,14 @@ ExclusiveArch:  x86_64
 Requires:       java-11-openjdk
 
 BuildRequires:  java-11-openjdk-devel
-BuildRequires:  gradle-local
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
 BuildRequires:  libstdc++-static
 BuildRequires:  mvn(antlr:antlr)
-BuildRequires:  mvn(junit:junit)
 BuildRequires:  mvn(org.antlr:antlr:3.1.3)
 BuildRequires:  mvn(org.antlr:stringtemplate)
 BuildRequires:  mvn(org.apache.ant:ant)
-%ifarch s390x x86_64 aarch64 ppc64le
 BuildRequires:  mvn(org.eclipse.swt:swt)
-%endif
-BuildRequires:  lucene
-BuildRequires:  lucene-grouping
-BuildRequires:  lucene-queryparser
 
 BuildRequires:  pkgconfig(gtk+-2.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
@@ -83,7 +76,7 @@ This package contains javadoc for %{name}.
 
 %prep
 %setup -q -n rt-11.0.3+1
-%patch0 -p1
+#%patch0 -p1
 #%ifarch s390 %{arm} %{ix86}
 #%patch -P 6 -p1
 #%else
@@ -94,41 +87,44 @@ This package contains javadoc for %{name}.
 #%patch4 -p1
 #%patch5 -p1
 
-cat > gradle.properties << EOF
-COMPILE_WEBKIT = false
-COMPILE_MEDIA = false
-%ifarch s390 %{arm} %{ix86}
-COMPILE_SWT = false
-%endif 
-BUILD_JAVADOC = true
-BUILD_SRC_ZIP = true
-GRADLE_VERSION_CHECK = false
-CONF = DebugNative
-EOF
+#Drop *src/test folders
+rm -rf modules/javafx.{base,controls,fxml,graphics,media,swing,swt,web}/src/test/
+rm -rf modules/jdk.packager/src/test/
 
-#Drop mixedantswing that contains dir named my.jar
-rm -rf modules/jdk.packager/src/test/examples/mixedantswing
+#prep for javafx.graphics
+cp -a modules/javafx.graphics/src/jslc/antlr modules/javafx.graphics/src/main/antlr3
+cp -a modules/javafx.graphics/src/main/resources/com/sun/javafx/tk/quantum/*.properties modules/javafx.graphics/src/main/java/com/sun/javafx/tk/quantum
 
 find -name '*.class' -delete
 find -name '*.jar' -delete
 
 #Bundled libraries
-rm -rf modules/javafx-media/src/main/native/gstreamer/3rd_party/glib
-rm -rf modules/javafx-media/src/main/native/gstreamer/gstreamer-lite
+#rm -rf modules/javafx-media/src/main/native/gstreamer/3rd_party/glib
+#rm -rf modules/javafx-media/src/main/native/gstreamer/gstreamer-lite
 
-#Drop SWT for 32 bits build
-%ifarch s390 %{arm} %{ix86}
-rm -rf modules/javafx-swt
-rm -rf modules/javafx-graphics/src/main/java/com/sun/glass/ui/swt
-%endif 
+#set VersionInfo
+cp -a ../build.xml .
+ant -f build.xml
+
+#TODO mettre à jour version dans les pom.xml
+
+#copy maven files
+cp -a ../pom-openjfx.xml ./pom.xml
+#javafx.base
+#javafx.controls
+#javafx.fxml
+#javafx.graphics
+#javafx.media
+#javafx.swing
+#javafx.swt
+#javafx.web
+
 
 %build
 #set openjdk11 for build
 export JAVA_HOME=%{_jvmdir}/java-11-openjdk
 
-#Tests do not run by default, tests in web fails and one test in graphics fail:
-#UnsatisfiedLinkError: libjavafx_iio.so: undefined symbol: jpeg_resync_to_restart
-gradle-local --no-daemon --offline
+
 
 %install
 install -d -m 755 %{buildroot}%{openjfxdir}
