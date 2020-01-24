@@ -116,6 +116,13 @@ do
 done
 
 mkdir ./modules/javafx.graphics/mvn-{antlr,decora,fulljava,graphics,libdecora,libglass,libglassgtk2,libglassgtk3,libjavafx_font,libjavafx_font_freetype,libjavafx_font_pango,libjavafx_iio,libprism_common,libprism_es2,libprism_sw,prism}
+for GRAPHMOD in antlr decora fulljava graphics libdecora libglass libglassgtk2 libglassgtk3 libjavafx_font libjavafx_font_freetype libjavafx_font_pango libjavafx_iio libprism_common libprism_es2 libprism_sw prism
+do
+	cp -a ../pom-$GRAPHMOD.xml  ./modules/javafx.graphics/mvn-$GRAPHMOD/pom.xml
+done
+
+mkdir ./modules/javafx.graphics/mvn-fulljava/mvn-{decora,java,prism}
+
 
 %build
 #set openjdk11 for build
