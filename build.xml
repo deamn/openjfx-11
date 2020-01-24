@@ -31,11 +31,23 @@
   <target name="replaceReleaseVersion" depends="checkReleaseVersion,replaceFullReleaseVersion" if="patch">
 	  <echo message="RELEASE_VERSION=${jfx.release.major.version}.${jfx.release.minor.version}.${jfx.release.security.version}"/>
 	  <replace file="${dst.versioninfo}/${file.versioninfo}" token="@RELEASE_VERSION@" value="${jfx.release.major.version}.${jfx.release.minor.version}.${jfx.release.security.version}"/>
+	  <replace file="javafx.pom" token="@VERSION@" value="${jfx.release.major.version}.${jfx.release.minor.version}.${jfx.release.security.version}"/>
+	  <replace file="pom.xml" token="@RELEASE_VERSION@" value="${jfx.release.major.version}.${jfx.release.minor.version}.${jfx.release.security.version}"/>
+	  <replace dir="modules" value="${jfx.release.major.version}.${jfx.release.minor.version}.${jfx.release.security.version}">
+		  <include name="**/pom.xml"/>
+		  <replacetoken>@RELEASE_VERSION@</replacetoken>
+	  </replace>
   </target>
   
   <target name="replaceFullReleaseVersion" unless="patch">
 	  <echo message="RELEASE_VERSION=${jfx.release.major.version}.${jfx.release.minor.version}.${jfx.release.security.version}.${jfx.release.patch.version}"/>
 	  <replace file="${dst.versioninfo}/${file.versioninfo}" token="@RELEASE_VERSION@" value="${jfx.release.major.version}.${jfx.release.minor.version}.${jfx.release.security.version}.${jfx.release.patch.version}"/>
+	  <replace file="javafx.pom" token="@VERSION@" value="${jfx.release.major.version}.${jfx.release.minor.version}.${jfx.release.security.version}.${jfx.release.patch.version}"/>
+	  <replace file="pom.xml" token="@RELEASE_VERSION@" value="${jfx.release.major.version}.${jfx.release.minor.version}.${jfx.release.security.version}.${jfx.release.patch.version}"/>
+	  <replace dir="modules" value="${jfx.release.major.version}.${jfx.release.minor.version}.${jfx.release.security.version}.${jfx.release.patch.version}">
+		  <include name="**/pom.xml"/>
+		  <replacetoken>@RELEASE_VERSION@</replacetoken>
+	  </replace>
   </target>
   
   <target name="prepare">

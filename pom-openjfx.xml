@@ -7,8 +7,9 @@
 	<name>openjfx</name>
 	<groupId>org.openjfx</groupId>
 	<artifactId>javafx</artifactId>
+	<description>OpenJFX JavaFX</description>
 	<packaging>pom</packaging>
-	<version>11.0.2</version>
+	<version>@RELEASE_VERSION@</version>
 	<modules>
 		<module>modules/javafx.base</module>
 		<module>modules/javafx.graphics</module>
