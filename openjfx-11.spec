@@ -110,15 +110,12 @@ ant -f build.xml
 
 #copy maven files
 cp -a ../pom-openjfx.xml ./pom.xml
-#javafx.base
-#javafx.controls
-#javafx.fxml
-#javafx.graphics
-#javafx.media
-#javafx.swing
-#javafx.swt
-#javafx.web
+for MODULE in base controls fxml graphics media swing swt web
+do
+	cp -a ../pom-$MODULE.xml  ./modules/javafx.$MODULE/pom.xml
+done
 
+mkdir ./modules/javafx.graphics/mvn-{antlr,decora,fulljava,graphics,libdecora,libglass,libglassgtk2,libglassgtk3,libjavafx_font,libjavafx_font_freetype,libjavafx_font_pango,libjavafx_iio,libprism_common,libprism_es2,libprism_sw,prism}
 
 %build
 #set openjdk11 for build
