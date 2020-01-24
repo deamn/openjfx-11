@@ -11,7 +11,7 @@
 		<version>11.0.2</version>
 	</parent>
 	<properties>
-		<commonCompilerOptions>-fno-strict-aliasing -fPIC -fno-omit-frame-pointer -fstack-protector -Wextra -Wall -Wformat-security -Wno-unused -Wno-parentheses -c -ffunction-sections -fdata-sections -O2 -DNDEBUG -pthread -Werror</commonCompilerOptions>
+		<commonCompilerOptions>-fno-strict-aliasing -fPIC -fno-omit-frame-pointer -fstack-protector -Wextra -Wall -Wformat-security -Wno-unused -Wno-parentheses -c -ffunction-sections -fdata-sections -O2 -DNDEBUG -Wno-deprecated-declarations -pthread -Werror</commonCompilerOptions>
 		<native.source.dir>../src/main/native-glass</native.source.dir>
 	</properties>
 	<build>
@@ -67,9 +67,6 @@
 							<directory>/usr/include/cairo</directory>
 						</source>
 						<source>
-							<directory>/usr/include/pixman-1</directory>
-						</source>
-						<source>
 							<directory>/usr/include/gtk-3.0</directory>
 						</source>
 						<source>
@@ -80,9 +77,6 @@
 						</source>
 						<source>
 							<directory>/usr/include/blkid</directory>
-						</source>
-						<source>
-							<directory>/usr/include/uuid</directory>
 						</source>
 						<source>
 							<directory>/usr/include/atk-1.0</directory>
@@ -129,10 +123,8 @@
 						<linkerStartOption>-lcairo</linkerStartOption>
 						<linkerStartOption>-lgdk_pixbuf-2.0</linkerStartOption>
 						<linkerStartOption>-lgio-2.0</linkerStartOption>
-						<linkerStartOption>-lpangoft2-1.0</linkerStartOption>
 						<linkerStartOption>-lpango-1.0</linkerStartOption>
 						<linkerStartOption>-lgobject-2.0</linkerStartOption>
-						<linkerStartOption>-lfontconfig</linkerStartOption>
 						<linkerStartOption>-lfreetype</linkerStartOption>
 						<linkerStartOption>-pthread</linkerStartOption>
 						<linkerStartOption>-lgthread-2.0</linkerStartOption>

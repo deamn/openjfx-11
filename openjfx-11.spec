@@ -127,6 +127,8 @@ do
 	cp -a ../pom-graphics_fulljava-$SUBMOD.xml  ./modules/javafx.graphics/mvn-fulljava/mvn-$SUBMOD/pom.xml
 done
 
+cp -a ./modules/javafx.swing/src/main/module-info/module-info.java ./modules/javafx.swing/src/main/java
+
 %build
 #set openjdk11 for build
 export JAVA_HOME=%{_jvmdir}/java-11-openjdk
