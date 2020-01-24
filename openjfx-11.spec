@@ -118,17 +118,20 @@ done
 mkdir ./modules/javafx.graphics/mvn-{antlr,decora,fulljava,graphics,libdecora,libglass,libglassgtk2,libglassgtk3,libjavafx_font,libjavafx_font_freetype,libjavafx_font_pango,libjavafx_iio,libprism_common,libprism_es2,libprism_sw,prism}
 for GRAPHMOD in antlr decora fulljava graphics libdecora libglass libglassgtk2 libglassgtk3 libjavafx_font libjavafx_font_freetype libjavafx_font_pango libjavafx_iio libprism_common libprism_es2 libprism_sw prism
 do
-	cp -a ../pom-$GRAPHMOD.xml  ./modules/javafx.graphics/mvn-$GRAPHMOD/pom.xml
+	cp -a ../pom-graphics_$GRAPHMOD.xml  ./modules/javafx.graphics/mvn-$GRAPHMOD/pom.xml
 done
 
 mkdir ./modules/javafx.graphics/mvn-fulljava/mvn-{decora,java,prism}
-
+for SUBMOD in decora java prism
+do
+	cp -a ../pom-graphics_fulljava-$SUBMOD.xml  ./modules/javafx.graphics/mvn-fulljava/mvn-$SUBMOD/pom.xml
+done
 
 %build
 #set openjdk11 for build
 export JAVA_HOME=%{_jvmdir}/java-11-openjdk
 
-
+mvn clean package
 
 %install
 install -d -m 755 %{buildroot}%{openjfxdir}

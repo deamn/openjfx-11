@@ -11,9 +11,9 @@
 		<version>11.0.2</version>
 	</parent>
 	<modules>
-		<module>prism</module>
-		<module>decora</module>
-		<module>java</module>
+		<module>mvn-prism</module>
+		<module>mvn-decora</module>
+		<module>mvn-java</module>
 	</modules>
 	<dependencies>
 		<dependency>

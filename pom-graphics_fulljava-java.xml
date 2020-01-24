@@ -103,16 +103,16 @@
 				<configuration>
 					<tasks>
 						<copy todir="../../target/classes/com/sun/prism/shader">
-							<fileset dir="../prism/target/classes/com/sun/prism/shader"/>
+							<fileset dir="../mvn-prism/target/classes/com/sun/prism/shader"/>
 						</copy>
 						<copy todir="../../target/classes/com/sun/scenario/effect/impl/prism/ps">
-							<fileset dir="../decora/target/classes/com/sun/scenario/effect/impl/prism/ps"/>
+							<fileset dir="../mvn-decora/target/classes/com/sun/scenario/effect/impl/prism/ps"/>
 						</copy>
 						<copy todir="../../target/classes/com/sun/scenario/effect/impl/sw/java">
-							<fileset dir="../decora/target/classes/com/sun/scenario/effect/impl/sw/java"/>
+							<fileset dir="../mvn-decora/target/classes/com/sun/scenario/effect/impl/sw/java"/>
 						</copy>
 						<copy todir="../../target/classes/com/sun/scenario/effect/impl/sw/sse">
-							<fileset dir="../decora/target/classes/com/sun/scenario/effect/impl/sw/sse"/>
+							<fileset dir="../mvn-decora/target/classes/com/sun/scenario/effect/impl/sw/sse"/>
 						</copy>
 					</tasks>
 				</configuration>
