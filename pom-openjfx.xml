@@ -5,8 +5,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<name>openjfx</name>
-	<groupId>org.openjfx</groupId>
-	<artifactId>javafx</artifactId>
+	<!--<groupId>org.openjfx</groupId>-->
+	<groupId>org.fedoraproject.xmvn.openjfx</groupId>
+	<!--<artifactId>javafx</artifactId>-->
+	<artifactId>aggregator</artifactId>
 	<description>OpenJFX JavaFX</description>
 	<packaging>pom</packaging>
 	<version>@RELEASE_VERSION@</version>

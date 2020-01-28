@@ -40,20 +40,14 @@ Source27:       pom-swt.xml
 Source28:       pom-web.xml
 Source29:       build.xml
 
-#Patch0:         0000-Change-SWT-and-Lucene.patch
-#Patch0:         0000-Fix-wait-call-in-PosixPlatform.patch
-#Patch1:         0001-Change-SWT-and-Lucene.patch
-#Patch2:         0002-Allow-build-to-work-on-newer-gradles.patch
-#Patch3:         0003-fix-cast-between-incompatible-function-types.patch
-#Patch4:         0004-Fix-Compilation-Flags.patch
-#Patch5:         0005-fxpackager-extract-jre-accept-symlink.patch
-#Patch6:         0006-Drop-SWT-32bits-and-Lucene.patch
-
 ExclusiveArch:  x86_64
 
-Requires:       java-11-openjdk
+Requires:       java-11-openjdk	
+Requires:       javapackages-tools
 
 BuildRequires:  java-11-openjdk-devel
+BuildRequires:  maven-local
+BuildRequires:	ant
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
 BuildRequires:  libstdc++-static
@@ -158,11 +152,13 @@ ant -f build.xml
 
 cp -a ./modules/javafx.swing/src/main/module-info/module-info.java ./modules/javafx.swing/src/main/java
 
+%mvn_package :aggregator __noinstall
+
 %build
 #set openjdk11 for build
 export JAVA_HOME=%{_jvmdir}/java-11-openjdk
 
-mvn clean package
+%mvn_build -f
 
 %install
 install -d -m 755 %{buildroot}%{openjfxdir}

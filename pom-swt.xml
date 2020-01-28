@@ -5,9 +5,8 @@
 	<packaging>jar</packaging>
 	<artifactId>javafx.swt</artifactId>
 	<parent>
-		<groupId>org.openjfx</groupId>
-		<artifactId>javafx</artifactId>
-		<relativePath>../pom.xml</relativePath>
+		<groupId>org.fedoraproject.xmvn.openjfx</groupId>
+		<artifactId>aggregator</artifactId>
 		<version>@RELEASE_VERSION@</version>
 	</parent>
 	<dependencies>
