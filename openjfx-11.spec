@@ -152,13 +152,20 @@ ant -f build.xml
 
 cp -a ./modules/javafx.swing/src/main/module-info/module-info.java ./modules/javafx.swing/src/main/java
 
-%mvn_package :aggregator __noinstall
+#%mvn_package ":javafx-base" openjfx
+#%mvn_package ":javafx-controls" openjfx
+#%mvn_package ":javafx-fxml" openjfx
+#%mvn_package ":javafx-graphics" openjfx
+#%mvn_package ":javafx-media" openjfx
+#%mvn_package ":javafx-swing" openjfx
+#%mvn_package ":javafx-swt" openjfx
+#%mvn_package ":javafx-web" openjfx
 
 %build
 #set openjdk11 for build
 export JAVA_HOME=%{_jvmdir}/java-11-openjdk
 
-%mvn_build -f
+%mvn_build -X
 
 %install
 install -d -m 755 %{buildroot}%{openjfxdir}

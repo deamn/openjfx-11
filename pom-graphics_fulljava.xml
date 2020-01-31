@@ -4,12 +4,14 @@
 	<name>javafx.graphics-full</name>
 	<packaging>pom</packaging>
 	<artifactId>javafx.graphics-full</artifactId>
-	<parent>
+	<!--<parent>
 		<groupId>org.openjfx</groupId>
 		<artifactId>javafx</artifactId>
 		<relativePath>../pom.xml</relativePath>
 		<version>@RELEASE_VERSION@</version>
-	</parent>
+	</parent>-->
+	<groupId>org.openjfx</groupId>
+	<version>@RELEASE_VERSION@</version>
 	<modules>
 		<module>mvn-prism</module>
 		<module>mvn-decora</module>

@@ -4,11 +4,13 @@
 	<name>javafx.graphics</name>
 	<packaging>pom</packaging>
 	<artifactId>javafx.graphics</artifactId>
-	<parent>
+	<!--<parent>
 		<groupId>org.fedoraproject.xmvn.openjfx</groupId>
 		<artifactId>aggregator</artifactId>
 		<version>@RELEASE_VERSION@</version>
-	</parent>
+	</parent>-->
+	<groupId>org.openjfx</groupId>
+	<version>@RELEASE_VERSION@</version>
 	<modules>
 		<module>mvn-antlr</module>
 		<module>mvn-graphics</module>

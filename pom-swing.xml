@@ -4,11 +4,13 @@
 	<name>javafx.swing</name>
 	<packaging>jar</packaging>
 	<artifactId>javafx.swing</artifactId>
-	<parent>
+	<!--<parent>
 		<groupId>org.fedoraproject.xmvn.openjfx</groupId>
 		<artifactId>aggregator</artifactId>
 		<version>@RELEASE_VERSION@</version>
-	</parent>
+	</parent>-->
+	<groupId>org.openjfx</groupId>
+	<version>@RELEASE_VERSION@</version>
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>

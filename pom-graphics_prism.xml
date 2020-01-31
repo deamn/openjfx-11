@@ -4,12 +4,14 @@
 	<name>javafx.graphics-prism</name>
 	<packaging>jar</packaging>
 	<artifactId>javafx.graphics-prism</artifactId>
-	<parent>
+	<!--<parent>
 		<groupId>org.openjfx</groupId>
 		<artifactId>javafx.graphics</artifactId>
 		<relativePath>../pom.xml</relativePath>
 		<version>@RELEASE_VERSION@</version>
-	</parent>
+	</parent>-->
+	<groupId>org.openjfx</groupId>
+	<version>@RELEASE_VERSION@</version>
 	<dependencies>
 		<dependency>
 			<groupId>org.antlr</groupId>
@@ -95,16 +97,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/MaskAlphaOne.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/MaskAlphaOne.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -122,16 +124,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/MaskAlphaTexture.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/MaskAlphaTexture.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -149,16 +151,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/MaskAlphaTextureDifference.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/MaskAlphaTextureDifference.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -176,16 +178,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/MaskDrawCircle.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/MaskDrawCircle.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -203,16 +205,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/MaskDrawEllipse.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/MaskDrawEllipse.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -230,16 +232,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/MaskDrawPgram.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/MaskDrawPgram.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -257,16 +259,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/MaskDrawRoundRect.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/MaskDrawRoundRect.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -284,16 +286,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/MaskDrawSemiRoundRect.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/MaskDrawSemiRoundRect.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -311,16 +313,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/MaskFillCircle.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/MaskFillCircle.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -338,16 +340,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/MaskFillEllipse.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/MaskFillEllipse.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -365,16 +367,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/MaskFillPgram.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/MaskFillPgram.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -392,16 +394,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/MaskFillRoundRect.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/MaskFillRoundRect.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -419,16 +421,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/MaskSolid.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/MaskSolid.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -446,16 +448,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/MaskTexture.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/MaskTexture.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -473,16 +475,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/PaintAlphaTextureImagePattern.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/PaintAlphaTextureImagePattern.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -500,16 +502,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/PaintAlphaTextureLinearGradient.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/PaintAlphaTextureLinearGradient.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -527,16 +529,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/PaintAlphaTextureRadialGradient.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/PaintAlphaTextureRadialGradient.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -554,16 +556,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/PaintColor.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/PaintColor.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -581,16 +583,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/PaintImagePattern.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/PaintImagePattern.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -608,16 +610,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/PaintLinearGradient.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/PaintLinearGradient.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -635,16 +637,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/PaintMaskTextureRGB.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/PaintMaskTextureRGB.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -662,16 +664,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/PaintMaskTextureSuper.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/PaintMaskTextureSuper.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -689,16 +691,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/PaintMultiGradient.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/PaintMultiGradient.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -716,16 +718,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/PaintRadialGradient.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/PaintRadialGradient.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -743,16 +745,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/PaintTextureFirstPassLCD.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/PaintTextureFirstPassLCD.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -770,16 +772,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/PaintTextureRGB.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/PaintTextureRGB.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -797,16 +799,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/PaintTextureSecondPassLCD.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/PaintTextureSecondPassLCD.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -824,16 +826,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/PaintTextureYUV422.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/PaintTextureYUV422.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -851,16 +853,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/PaintTextureYUV444.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/PaintTextureYUV444.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>
@@ -878,16 +880,16 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-prism</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-prism</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/prism</argument>
 							<argument>-d3d</argument>
 							<argument>-es2</argument>
 							<argument>-name</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-prism/PaintTextureYV12.jsl</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-prism/PaintTextureYV12.jsl</argument>
 						</arguments>
 					</configuration>
 				  </execution>

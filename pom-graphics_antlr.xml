@@ -4,12 +4,14 @@
 	<name>javafx.graphics-antlr</name>
 	<packaging>jar</packaging>
 	<artifactId>javafx.graphics-antlr</artifactId>
-	<parent>
+	<!--<parent>
 		<groupId>org.openjfx</groupId>
 		<artifactId>javafx.graphics</artifactId>
 		<relativePath>../pom.xml</relativePath>
 		<version>@RELEASE_VERSION@</version>
-	</parent>
+	</parent>-->
+	<groupId>org.openjfx</groupId>
+	<version>@RELEASE_VERSION@</version>
 	<dependencies>
 		<dependency>
 			<groupId>org.antlr</groupId>

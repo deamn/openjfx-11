@@ -4,12 +4,14 @@
 	<name>javafx.graphics-decora</name>
 	<packaging>jar</packaging>
 	<artifactId>javafx.graphics-decora</artifactId>
-	<parent>
+	<!--<parent>
 		<groupId>org.openjfx</groupId>
 		<artifactId>javafx.graphics</artifactId>
 		<relativePath>../pom.xml</relativePath>
 		<version>@RELEASE_VERSION@</version>
-	</parent>
+	</parent>-->
+	<groupId>org.openjfx</groupId>
+	<version>@RELEASE_VERSION@</version>
 	<dependencies>
 		<dependency>
 			<groupId>org.antlr</groupId>
@@ -97,9 +99,9 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-decora</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-decora/</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-decora</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-decora</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/scenario/effect</argument>
@@ -122,9 +124,9 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-decora</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-decora</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-decora</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-decora</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/scenario/effect</argument>
@@ -147,9 +149,9 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-decora</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-decora</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-decora</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-decora</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/scenario/effect</argument>
@@ -172,9 +174,9 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-decora</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-decora</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-decora</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-decora</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/scenario/effect</argument>
@@ -197,9 +199,9 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-decora</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-decora</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-decora</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-decora</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/scenario/effect</argument>
@@ -222,9 +224,9 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-decora</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-decora</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-decora</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-decora</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/scenario/effect</argument>
@@ -247,9 +249,9 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-decora</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-decora</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-decora</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-decora</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/scenario/effect</argument>
@@ -272,9 +274,9 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-decora</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-decora</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-decora</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-decora</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/scenario/effect</argument>
@@ -297,9 +299,9 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-decora</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-decora</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-decora</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-decora</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/scenario/effect</argument>
@@ -322,9 +324,9 @@
 						<addResourcesToClasspath>true</addResourcesToClasspath>
 						<arguments>
 							<argument>-i</argument>
-							<argument>${project.parent.basedir}/src/main/jsl-decora</argument>
+							<argument>modules/javafx.graphics/src/main/jsl-decora</argument>
 							<argument>-o</argument> 
-							<argument>${project.parent.basedir}/build/gensrc/jsl-decora</argument>
+							<argument>modules/javafx.graphics/build/gensrc/jsl-decora</argument>
 							<argument>-t</argument> 
 							<argument>-pkg</argument> 
 							<argument>com/sun/scenario/effect</argument>

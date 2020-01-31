@@ -4,12 +4,14 @@
 	<name>javafx.graphics-full-prism</name>
 	<packaging>jar</packaging>
 	<artifactId>javafx.graphics-full-prism</artifactId>
-	<parent>
+	<!--<parent>
 		<groupId>org.openjfx</groupId>
 		<artifactId>javafx.graphics-full</artifactId>
 		<relativePath>../pom.xml</relativePath>
 		<version>@RELEASE_VERSION@</version>
-	</parent>
+	</parent>-->
+	<groupId>org.openjfx</groupId>
+	<version>@RELEASE_VERSION@</version>
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>

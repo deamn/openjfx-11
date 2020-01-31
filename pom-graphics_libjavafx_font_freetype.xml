@@ -4,12 +4,14 @@
 	<name>libjavafx_font_freetype</name>
 	<packaging>so</packaging>
 	<artifactId>libjavafx_font_freetype</artifactId>
-	<parent>
+	<!--<parent>
 		<groupId>org.openjfx</groupId>
 		<artifactId>javafx</artifactId>
 		<relativePath>../pom.xml</relativePath>
 		<version>@RELEASE_VERSION@</version>
-	</parent>
+	</parent>-->
+	<groupId>org.openjfx</groupId>
+	<version>@RELEASE_VERSION@</version>
 	<properties>
 		<commonCompilerOptions>-DJFXFONT_PLUS -fno-strict-aliasing -fPIC -fno-omit-frame-pointer -fstack-protector -Wextra -Wall -Wformat-security -Wno-unused -Wno-parentheses -c -ffunction-sections -fdata-sections -O2 -DNDEBUG -D_ENABLE_PANGO</commonCompilerOptions>
 		<native.source.dir>../src/main/native-font</native.source.dir>

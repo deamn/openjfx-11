@@ -4,12 +4,14 @@
 	<name>libprism_common</name>
 	<packaging>so</packaging>
 	<artifactId>libprism_common</artifactId>
-	<parent>
+	<!--<parent>
 		<groupId>org.openjfx</groupId>
 		<artifactId>javafx</artifactId>
 		<relativePath>../pom.xml</relativePath>
 		<version>@RELEASE_VERSION@</version>
-	</parent>
+	</parent>-->
+	<groupId>org.openjfx</groupId>
+	<version>@RELEASE_VERSION@</version>
 	<properties>
 		<commonCompilerOptions>-fno-strict-aliasing -fPIC -fno-omit-frame-pointer -fstack-protector -Wextra -Wall -Wformat-security -Wno-unused -Wno-parentheses -c -ffunction-sections -fdata-sections -O2 -DNDEBUG -DINLINE=inline</commonCompilerOptions>
 		<native.source.dir>../src/main/native-prism</native.source.dir>

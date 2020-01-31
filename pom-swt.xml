@@ -4,11 +4,13 @@
 	<name>javafx.swt</name>
 	<packaging>jar</packaging>
 	<artifactId>javafx.swt</artifactId>
-	<parent>
+	<!--<parent>
 		<groupId>org.fedoraproject.xmvn.openjfx</groupId>
 		<artifactId>aggregator</artifactId>
 		<version>@RELEASE_VERSION@</version>
-	</parent>
+	</parent>-->
+	<groupId>org.openjfx</groupId>
+	<version>@RELEASE_VERSION@</version>
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
@@ -24,8 +26,8 @@
 			<groupId>org.eclipse.swt</groupId>
 			<artifactId>org.eclipse.swt.gtk.linux.x86_64</artifactId>
 			<version>4.9</version>
-			<scope>system</scope>
-			<systemPath>/usr/lib/java/swt.jar</systemPath>
+			<!--<scope>system</scope>
+			<systemPath>/usr/lib/java/swt.jar</systemPath>-->
 		</dependency>
 	</dependencies>
 	<build>
