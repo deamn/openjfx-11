@@ -51,7 +51,7 @@
 						<arg>-nowarn</arg>
 						<arg>-implicit:none</arg>
 						<arg>-h</arg>
-						<arg>${project.parent.basedir}/build/gensrc/headers/</arg>
+						<arg>modules/javafx.graphics/build/gensrc/headers/</arg>
 					</compilerArgs>
 					<excludes>
 						<exclude>**/mac/*.java</exclude>

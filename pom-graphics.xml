@@ -3,14 +3,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<name>javafx.graphics</name>
 	<packaging>pom</packaging>
-	<artifactId>javafx.graphics</artifactId>
-	<!--<parent>
-		<groupId>org.fedoraproject.xmvn.openjfx</groupId>
-		<artifactId>aggregator</artifactId>
+	<artifactId>javafx.graphics-aggregator</artifactId>
+	<parent>
+		<groupId>org.openjfx</groupId>
+		<artifactId>javafx</artifactId>
 		<version>@RELEASE_VERSION@</version>
-	</parent>-->
-	<groupId>org.openjfx</groupId>
-	<version>@RELEASE_VERSION@</version>
+		<relativePath>../../pom.xml</relativePath>
+	</parent>
 	<modules>
 		<module>mvn-antlr</module>
 		<module>mvn-graphics</module>
@@ -29,22 +28,5 @@
 		<module>mvn-libprism_es2</module>
 		<module>mvn-libprism_sw</module>
 	</modules>
-	<build>
-		<plugins>
-			<plugin>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.1.2</version>
-				<configuration>
-					<finalName>javafx.graphics</finalName>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-
-	<dependencyManagement>
-		<dependencies>
-			
-		</dependencies>
-	</dependencyManagement>
 
 </project>

@@ -56,6 +56,7 @@ BuildRequires:  mvn(org.antlr:antlr:3.1.3)
 BuildRequires:  mvn(org.antlr:stringtemplate)
 BuildRequires:  mvn(org.apache.ant:ant)
 BuildRequires:  mvn(org.eclipse.swt:swt)
+#BuildRequires:  native-maven-plugin
 
 BuildRequires:  pkgconfig(gtk+-2.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
@@ -152,20 +153,11 @@ ant -f build.xml
 
 cp -a ./modules/javafx.swing/src/main/module-info/module-info.java ./modules/javafx.swing/src/main/java
 
-#%mvn_package ":javafx-base" openjfx
-#%mvn_package ":javafx-controls" openjfx
-#%mvn_package ":javafx-fxml" openjfx
-#%mvn_package ":javafx-graphics" openjfx
-#%mvn_package ":javafx-media" openjfx
-#%mvn_package ":javafx-swing" openjfx
-#%mvn_package ":javafx-swt" openjfx
-#%mvn_package ":javafx-web" openjfx
-
 %build
 #set openjdk11 for build
 export JAVA_HOME=%{_jvmdir}/java-11-openjdk
 
-%mvn_build -X
+%mvn_build
 
 %install
 install -d -m 755 %{buildroot}%{openjfxdir}

@@ -4,13 +4,12 @@
 	<name>javafx.fxml</name>
 	<packaging>jar</packaging>
 	<artifactId>javafx.fxml</artifactId>
-	<!--<parent>
-		<groupId>org.fedoraproject.xmvn.openjfx</groupId>
-		<artifactId>aggregator</artifactId>
+	<parent>
+		<groupId>org.openjfx</groupId>
+		<artifactId>javafx</artifactId>
 		<version>@RELEASE_VERSION@</version>
-	</parent>-->
-	<groupId>org.openjfx</groupId>
-	<version>@RELEASE_VERSION@</version>
+		<relativePath>../../pom.xml</relativePath>
+	</parent>
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>

@@ -45,7 +45,7 @@
 							<directory>${JAVA_HOME}/include/linux</directory>
 						</source>
 						<source>
-							<directory>../mvn-fulljava/build/gensrc/headers</directory>
+							<directory>../build/gensrc/headers</directory>
 						</source>
 						<source>
 							<directory>${native.source.dir}/GL</directory>
