@@ -23,10 +23,8 @@
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.swt</groupId>
-			<artifactId>org.eclipse.swt.gtk.linux.x86_64</artifactId>
-			<version>3.110.0.v20190308-0658</version>
-			<!--<scope>system</scope>
-			<systemPath>/usr/lib/java/swt.jar</systemPath>-->
+			<artifactId>swt</artifactId>
+			<!--<version>3.110.0.v20190308-0658</version>-->
 		</dependency>
 	</dependencies>
 	<build>

@@ -1,17 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<!--<name>javafx.graphics-full-java</name>-->
 	<name>javafx.graphics</name>
 	<packaging>jar</packaging>
-	<!--<artifactId>javafx.graphics-full-java</artifactId>-->
 	<artifactId>javafx.graphics</artifactId>
-	<!--<parent>
-		<groupId>org.openjfx</groupId>
-		<artifactId>javafx.graphics-full</artifactId>
-		<relativePath>../pom.xml</relativePath>
-		<version>@RELEASE_VERSION@</version>
-	</parent>-->
 	<groupId>org.openjfx</groupId>
 	<version>@RELEASE_VERSION@</version>
 	<dependencies>

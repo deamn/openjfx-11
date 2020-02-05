@@ -1,7 +1,7 @@
 %global openjfxdir %{_jvmdir}/%{name}
 
 Name:           openjfx-11
-Version:        11.0.3.1
+Version:        11.0.3
 Release:        0%{?dist}
 Summary:        Rich client application platform for Java
 
@@ -51,12 +51,14 @@ BuildRequires:	ant
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
 BuildRequires:  libstdc++-static
+BuildRequires:  mvn(org.eclipse.swt:swt)
 BuildRequires:  mvn(antlr:antlr)
-BuildRequires:  mvn(org.antlr:antlr:3.1.3)
+BuildRequires:  mvn(org.antlr:antlr)
 BuildRequires:  mvn(org.antlr:stringtemplate)
 BuildRequires:  mvn(org.apache.ant:ant)
-BuildRequires:  mvn(org.eclipse.swt:swt)
-#BuildRequires:  native-maven-plugin
+BuildRequires:  mvn(org.codehaus.mojo:native-maven-plugin)
+BuildRequires:  mvn(org.codehaus.mojo:exec-maven-plugin)
+BuildRequires:  mvn(org.apache.maven.plugins:maven-antrun-plugin)
 
 BuildRequires:  pkgconfig(gtk+-2.0)
 BuildRequires:  pkgconfig(gtk+-3.0)
@@ -66,9 +68,9 @@ BuildRequires:  pkgconfig(libjpeg)
 BuildRequires:  pkgconfig(xxf86vm)
 BuildRequires:  pkgconfig(gl)
 
-BuildRequires:  bison
-BuildRequires:  flex
-BuildRequires:  gperf
+#BuildRequires:  bison
+#BuildRequires:  flex
+#BuildRequires:  gperf
 
 %description
 JavaFX/OpenJFX is a set of graphics and media APIs that enables Java
@@ -77,26 +79,18 @@ applications that operate consistently across diverse platforms.
 
 The media and web module have been removed due to missing dependencies.
 
-%package devel
-Requires: %{name}%{?_isa} = %{version}-%{release}
-Requires: java-devel
-Summary: OpenJFX development tools and libraries
+#%package src
+#Requires: %{name}%{?_isa} = %{version}-%{release}
+#Summary: OpenJFX Source Bundle
 
-%description devel
-%{summary}.
+#%description src
+#%{summary}.
 
-%package src
-Requires: %{name}%{?_isa} = %{version}-%{release}
-Summary: OpenJFX Source Bundle
+#%package javadoc
+#Summary: Javadoc for %{name}
 
-%description src
-%{summary}.
-
-%package javadoc
-Summary: Javadoc for %{name}
-
-%description javadoc
-This package contains javadoc for %{name}.
+#%description javadoc
+#This package contains javadoc for %{name}.
 
 %prep
 %setup -q -n rt-11.0.3+1
@@ -161,7 +155,8 @@ export JAVA_HOME=%{_jvmdir}/java-11-openjdk
 
 %install
 install -d -m 755 %{buildroot}%{openjfxdir}
-cp -a modules/javafx.{base,controls,fxml,graphics,media,swing,swt,web}/target/*.jar %{buildroot}%{openjfxdir}
+cp -a modules/javafx.{base,controls,fxml,media,swing,swt,web}/target/*.jar %{buildroot}%{openjfxdir}
+cp -a modules/javafx.graphics/mvn-fulljava/mvn-java/target/*.jar %{buildroot}%{openjfxdir}
 
 #install -d -m 755 %{buildroot}%{_mandir}/man1
 #install -m 644 build/sdk/man/man1/* %{buildroot}%{_mandir}/man1
@@ -176,29 +171,17 @@ cp -a modules/javafx.{base,controls,fxml,graphics,media,swing,swt,web}/target/*.
 
 %files
 %dir %{openjfxdir}
-%{openjfxdir}/rt
+%{openjfxdir}/
 %license LICENSE
 %doc README
 
-%files devel
-%{openjfxdir}/lib
-%{openjfxdir}/bin
-%{_bindir}/javafxpackager
-%{_bindir}/javapackager
-%{_mandir}/man1/javafxpackager.1*
-%{_mandir}/man1/javapackager.1*
-%{_mandir}/ja_JP/man1/javafxpackager.1*
-%{_mandir}/ja_JP/man1/javapackager.1*
-%license LICENSE
-%doc README
+#%files src
+#%{openjfxdir}/javafx-src.zip
 
-%files src
-%{openjfxdir}/javafx-src.zip
-
-%files javadoc
-%{_javadocdir}/%{name}
-%license LICENSE
+#%files javadoc
+#%{_javadocdir}/%{name}
+#%license LICENSE
 
 %changelog
-* Wed Aug 14 2019 Nicolas De Amicis - 11.0.3.1-0
+* Wed Aug 14 2019 Nicolas De Amicis - 11.0.3-0
 - Initial packaging

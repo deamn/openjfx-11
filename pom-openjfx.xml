@@ -21,13 +21,9 @@
 		<module>modules/javafx.swing</module>
 	</modules>
 	<build>
-		
-	</build>
-
-	<dependencyManagement>
-		<dependencies>
+		<plugins>
 			
-		</dependencies>
-	</dependencyManagement>
+		</plugins>
+	</build>
 
 </project>
