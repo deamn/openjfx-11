@@ -151,12 +151,14 @@ cp -a ./modules/javafx.swing/src/main/module-info/module-info.java ./modules/jav
 #set openjdk11 for build
 export JAVA_HOME=%{_jvmdir}/java-11-openjdk
 
-%mvn_build
+%mvn_build --skip-javadoc
 
 %install
+
 install -d -m 755 %{buildroot}%{openjfxdir}
 cp -a modules/javafx.{base,controls,fxml,media,swing,swt,web}/target/*.jar %{buildroot}%{openjfxdir}
 cp -a modules/javafx.graphics/mvn-fulljava/mvn-java/target/*.jar %{buildroot}%{openjfxdir}
+cp -a modules/javafx.graphics/mvn-lib{decora,javafx_font,javafx_font_freetype,javafx_font_pango,glass,glassgtk2,glassgtk3,javafx_iio,prism_common,prism_es2,prism_sw}/target/*.so %{buildroot}%{openjfxdir}
 
 #install -d -m 755 %{buildroot}%{_mandir}/man1
 #install -m 644 build/sdk/man/man1/* %{buildroot}%{_mandir}/man1
@@ -173,6 +175,8 @@ cp -a modules/javafx.graphics/mvn-fulljava/mvn-java/target/*.jar %{buildroot}%{o
 %dir %{openjfxdir}
 %{openjfxdir}/
 %license LICENSE
+%license ADDITIONAL_LICENSE_INFO
+%license ASSEMBLY_EXCEPTION
 %doc README
 
 #%files src
