@@ -5,7 +5,6 @@ Version:        11.0.3
 Release:        0%{?dist}
 Summary:        Rich client application platform for Java
 
-#fxpackager is BSD -> TODO fxpackager is always included?
 License:        GPL v2 with exceptions and BSD
 URL:            http://openjdk.java.net/projects/openjfx/
 
@@ -68,10 +67,6 @@ BuildRequires:  pkgconfig(libjpeg)
 BuildRequires:  pkgconfig(xxf86vm)
 BuildRequires:  pkgconfig(gl)
 
-#BuildRequires:  bison
-#BuildRequires:  flex
-#BuildRequires:  gperf
-
 %description
 JavaFX/OpenJFX is a set of graphics and media APIs that enables Java
 developers to design, create, test, debug, and deploy rich client
@@ -79,31 +74,10 @@ applications that operate consistently across diverse platforms.
 
 The media and web module have been removed due to missing dependencies.
 
-#%package src
-#Requires: %{name}%{?_isa} = %{version}-%{release}
-#Summary: OpenJFX Source Bundle
-
-#%description src
-#%{summary}.
-
-#%package javadoc
-#Summary: Javadoc for %{name}
-
-#%description javadoc
-#This package contains javadoc for %{name}.
+%global debug_package %{nil}
 
 %prep
 %setup -q -n rt-11.0.3+1
-#%patch0 -p1
-#%ifarch s390 %{arm} %{ix86}
-#%patch -P 6 -p1
-#%else
-#%patch1 -p1
-#%endif
-#%patch2 -p1
-#%patch3 -p1
-#%patch4 -p1
-#%patch5 -p1
 
 #Drop *src/test folders
 rm -rf modules/javafx.{base,controls,fxml,graphics,media,swing,swt,web}/src/test/
@@ -115,10 +89,6 @@ cp -a modules/javafx.graphics/src/main/resources/com/sun/javafx/tk/quantum/*.pro
 
 find -name '*.class' -delete
 find -name '*.jar' -delete
-
-#Bundled libraries
-#rm -rf modules/javafx-media/src/main/native/gstreamer/3rd_party/glib
-#rm -rf modules/javafx-media/src/main/native/gstreamer/gstreamer-lite
 
 #copy maven files
 cp -a %{_sourcedir}/pom-*.xml .
@@ -148,8 +118,11 @@ ant -f build.xml
 cp -a ./modules/javafx.swing/src/main/module-info/module-info.java ./modules/javafx.swing/src/main/java
 
 %build
+
 #set openjdk11 for build
 export JAVA_HOME=%{_jvmdir}/java-11-openjdk
+export CFLAGS="${RPM_OPT_FLAGS}"
+export CXXFLAGS="${RPM_OPT_FLAGS}" 
 
 %mvn_build --skip-javadoc
 
@@ -160,17 +133,6 @@ cp -a modules/javafx.{base,controls,fxml,media,swing,swt,web}/target/*.jar %{bui
 cp -a modules/javafx.graphics/mvn-fulljava/mvn-java/target/*.jar %{buildroot}%{openjfxdir}
 cp -a modules/javafx.graphics/mvn-lib{decora,javafx_font,javafx_font_freetype,javafx_font_pango,glass,glassgtk2,glassgtk3,javafx_iio,prism_common,prism_es2,prism_sw}/target/*.so %{buildroot}%{openjfxdir}
 
-#install -d -m 755 %{buildroot}%{_mandir}/man1
-#install -m 644 build/sdk/man/man1/* %{buildroot}%{_mandir}/man1
-
-#install -d -m 755 %{buildroot}%{_mandir}/ja_JP/man1
-#install -m 644 build/sdk/man/ja_JP.UTF-8/man1/* %{buildroot}%{_mandir}/ja_JP/man1
-
-#install -m 644 build/sdk/javafx-src.zip %{buildroot}%{openjfxdir}/javafx-src.zip
-
-#install -d 755 %{buildroot}%{_javadocdir}/%{name}
-#cp -a build/sdk/docs/api/. %{buildroot}%{_javadocdir}/%{name}
-
 %files
 %dir %{openjfxdir}
 %{openjfxdir}/
@@ -178,13 +140,6 @@ cp -a modules/javafx.graphics/mvn-lib{decora,javafx_font,javafx_font_freetype,ja
 %license ADDITIONAL_LICENSE_INFO
 %license ASSEMBLY_EXCEPTION
 %doc README
-
-#%files src
-#%{openjfxdir}/javafx-src.zip
-
-#%files javadoc
-#%{_javadocdir}/%{name}
-#%license LICENSE
 
 %changelog
 * Wed Aug 14 2019 Nicolas De Amicis - 11.0.3-0

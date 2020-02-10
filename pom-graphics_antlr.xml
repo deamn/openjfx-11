@@ -4,34 +4,24 @@
 	<name>javafx.graphics-antlr</name>
 	<packaging>jar</packaging>
 	<artifactId>javafx.graphics-antlr</artifactId>
-	<!--<parent>
-		<groupId>org.openjfx</groupId>
-		<artifactId>javafx.graphics</artifactId>
-		<relativePath>../pom.xml</relativePath>
-		<version>@RELEASE_VERSION@</version>
-	</parent>-->
 	<groupId>org.openjfx</groupId>
 	<version>@RELEASE_VERSION@</version>
 	<dependencies>
 		<dependency>
 			<groupId>org.antlr</groupId>
 			<artifactId>antlr</artifactId>
-			<version>3.5.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.antlr</groupId>
 			<artifactId>antlr-runtime</artifactId>
-			<version>3.5.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.antlr</groupId>
 			<artifactId>ST4</artifactId>
-			<version>4.0.8</version>
 		</dependency>
 		<dependency>
 			<groupId>org.antlr</groupId>
 			<artifactId>stringtemplate</artifactId>
-			<version>3.2.1</version>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
@@ -55,11 +45,7 @@
 			<plugin>
 				<groupId>org.antlr</groupId>
 				<artifactId>antlr3-maven-plugin</artifactId>
-				<version>3.5.2</version>
 				<configuration>
-					<!--<sourceDirectory>${basedir}/src/main/antlr3</sourceDirectory>-->
-					<!--<outputDirectory>${project.build.directory}/generated-sources/antlr3</outputDirectory>-->
-					<!--<outputDirectory>${basedir}/src/main/java</outputDirectory>-->
 					<sourceDirectory>../src/main/antlr3</sourceDirectory>
 					<outputDirectory>../build/gensrc/antlr</outputDirectory>
 				</configuration>
@@ -74,27 +60,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
 				<configuration>
-					<!--<excludes>
-						<exclude>**/android/**</exclude>
-						<exclude>**/dalvik/**</exclude>
-						<exclude>**/shims/**</exclude>
-						<exclude>**/main/conf/**</exclude>
-						<exclude>**/main/doc/**</exclude>
-						<exclude>**/main/jsl-decora/**</exclude>
-						<exclude>**/main/jsl-prism/**</exclude>
-						<exclude>**/main/legal/**</exclude>
-						<exclude>**/main/native-decora/**</exclude>
-						<exclude>**/main/native-font/**</exclude>
-						<exclude>**/main/native-glass/**</exclude>
-						<exclude>**/main/native-iio/**</exclude>
-						<exclude>**/main/native-prism/**</exclude>
-						<exclude>**/main/native-prism-d3d/**</exclude>
-						<exclude>**/main/native-prism-es2/**</exclude>
-						<exclude>**/main/native-prism-sw/**</exclude>
-						<exclude>**/main/resources/**</exclude>
-					</excludes>-->
 					<release>11</release>
 					<compilerArgs>
 						<arg>-g:source,lines,vars</arg>

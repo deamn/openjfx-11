@@ -4,12 +4,6 @@
 	<name>libprism_common</name>
 	<packaging>so</packaging>
 	<artifactId>libprism_common</artifactId>
-	<!--<parent>
-		<groupId>org.openjfx</groupId>
-		<artifactId>javafx</artifactId>
-		<relativePath>../pom.xml</relativePath>
-		<version>@RELEASE_VERSION@</version>
-	</parent>-->
 	<groupId>org.openjfx</groupId>
 	<version>@RELEASE_VERSION@</version>
 	<properties>
@@ -21,7 +15,6 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>native-maven-plugin</artifactId>
-				<version>1.0-alpha-8</version>
 				<extensions>true</extensions>
 				<configuration>
 					<compilerStartOptions>

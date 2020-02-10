@@ -4,34 +4,24 @@
 	<name>javafx.graphics-prism</name>
 	<packaging>jar</packaging>
 	<artifactId>javafx.graphics-prism</artifactId>
-	<!--<parent>
-		<groupId>org.openjfx</groupId>
-		<artifactId>javafx.graphics</artifactId>
-		<relativePath>../pom.xml</relativePath>
-		<version>@RELEASE_VERSION@</version>
-	</parent>-->
 	<groupId>org.openjfx</groupId>
 	<version>@RELEASE_VERSION@</version>
 	<dependencies>
 		<dependency>
 			<groupId>org.antlr</groupId>
 			<artifactId>antlr</artifactId>
-			<version>3.5.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.antlr</groupId>
 			<artifactId>antlr-runtime</artifactId>
-			<version>3.5.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.antlr</groupId>
 			<artifactId>ST4</artifactId>
-			<version>4.0.8</version>
 		</dependency>
 		<dependency>
 			<groupId>org.antlr</groupId>
 			<artifactId>stringtemplate</artifactId>
-			<version>3.2.1</version>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
@@ -65,7 +55,6 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
 				<configuration>
 					<release>11</release>
 					<compilerArgs>
@@ -81,7 +70,6 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
-				<version>1.6.0</version>
 				<executions>
 				  <execution>
 					<id>MaskAlphaOne</id>
